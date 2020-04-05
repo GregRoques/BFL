@@ -1,0 +1,75 @@
+.footerContainer {
+    position: fixed;
+    width: 100%;
+    height: 25px;
+    bottom: 2%;
+    padding: 0 0 5px 0;
+    opacity:0;
+    animation-name: fadeIn;
+    animation-duration:1s;
+    animation-delay:0.5s;
+    animation-fill-mode: forwards;
+    text-align: center;
+    background-color: #09548F;
+    color:black
+}
+
+
+.footerContainer a{
+    text-decoration: none;
+    color:inherit;
+    text-align:center;
+    
+}
+
+.grid {
+    padding: 5px;
+    display: grid;
+    font-size: 18px;
+    grid-template-columns: auto auto auto;
+}
+
+.closed {
+    font-weight: bold;
+    /* color:rgb(250,173,73); */
+}
+
+.address{
+    cursor: pointer;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+.visibleBig{
+    display: inline;
+}
+
+.visibleSmall{
+    display: none; 
+}
+
+@media screen and (max-width: 619px), (min-device-width: 767px) and (max-device-width: 1025px) and (orientation : portrait){
+    .visibleBig{
+        display: none;
+    }
+    
+    .visibleSmall{
+        display: inline;
+    }
+
+    .grid{
+        grid-template-columns: auto;
+    }
+
+    .footerContainer{
+        color: white;
+    }
+
+}

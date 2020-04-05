@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import { Route, Switch, Redirect, withRouter } from "react-router-dom";
+import cssApp from './app.module.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Layout from "./Layout/HOC/Layout";
+import Home from "./Home/Home";
+import Faq from "./Faq/Faq";
+import Contact from "./Contact/Contact";
+
+class App extends Component {
+  NoPage = () => {
+    return <Redirect push to={Home} />;
+};
+
+serviceAbout = () => {
+    return <Redirect push to="/faq/about" />;
 }
 
-export default App;
+  render() {
+    return (
+      <div className={cssApp.body}>
+        <Layout>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/contact" component={Contact} />
+            <Route exact path="/faq" component={this.FaqMain} />
+            <Route exact path="/faq/:param" component={Faq} />
+            <Route component={this.NoPage} />
+          </Switch>
+        </Layout>
+      </div>
+    );
+  }
+}
+
+export default withRouter(App);
