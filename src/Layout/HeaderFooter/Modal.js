@@ -36,6 +36,12 @@ export const ModalMobile = ({ isOpen, close, isFadeOut }) => {
                         Email Us
                     </a></div>
                 </div>
+                <a href="https://www.facebook.com/Beds4Less" target="_blank" rel="noopener noreferrer">
+                    <img alt="Facebook" className={ cssModal.connectSocial } src="/myImages/facebook.png"/>
+                </a>
+                <a href="https://www.yelp.com/biz/beds-4-less-kenner" target="_blank" rel="noopener noreferrer">
+                    <img alt="Yelp" className={ cssModal.connectSocial } src="/myImages/yelp.png"/>
+                </a>
             </div>
         </div>
     ) : null;

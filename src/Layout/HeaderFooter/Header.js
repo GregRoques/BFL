@@ -30,7 +30,7 @@ class Header extends Component {
         } else {
             this.setState({ isFadeOut: true });
             setTimeout(() => {
-                this.modalTogglerMobile();
+                this.modalToggler();
             }, 1500);
         }
     }
@@ -40,28 +40,23 @@ class Header extends Component {
             <div>
                 <ModalMobile
                     isOpen={ this.state.isOpen }
-                    close={ this.modalTogglerMobile }
+                    close={ this.modalToggler}
                     isFadeOut = {this.state.isFadeOut}
                 />
                 <ModalDesktop
                     isOpen={ this.state.isOpen }
-                    close={ this.modalTogglerMobile }
+                    close={ this.modalToggler}
                     isFadeOut = {this.state.isFadeOut}
                 />
                 <div className={ cssHeader.headerPosition}>
                     <div className={ cssHeader.headerContainer }>
-                        <Link to="/"><img alt="VeriCure Logo" className={ cssHeader.B4Llogo } src="/logos/smallLogo.png"/></Link>
-                        { !this.state.isResized
-                            ? <div className= { cssHeader.headerContainerSmallText}>
+                        <Link to="/"><img alt="B4L Logo" className={ cssHeader.B4Llogo } src="/logos/smallLogo.png"/></Link>
+                            <div className= { cssHeader.headerContainerSmallText}>
                                 {!this.state.isOpen
                                     ? <img alt="hamburger" className={cssHeader.imageContain} src="/myImages/hamburger.png" onClick={() => this.modalToggler()}/>
                                     : <span className={cssHeader.imageContain} onClick={() => this.modalToggler("close")}>X</span>
                                 }
                             </div>
-                            : <div className= { cssHeader.headerContainerSmallText}>
-                                <img alt="hamburger" className={cssHeader.imageContain} src="/myImages/hamburger.png" onClick={() => this.modalToggler(this.state.isOpen ? "close" : null)}/>
-                            </div>
-                        }
                     </div>
                 </div>
             </div>

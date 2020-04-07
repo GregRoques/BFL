@@ -17,7 +17,7 @@
 
 .footerContainer a{
     text-decoration: none;
-    color:inherit;
+    color:white;
     text-align:center;
     
 }
@@ -27,6 +27,7 @@
     display: grid;
     font-size: 18px;
     grid-template-columns: auto auto auto;
+    color: white;
 }
 
 .closed {
@@ -62,10 +63,6 @@
     
     .visibleSmall{
         display: inline;
-    }
-
-    .grid{
-        grid-template-columns: auto;
     }
 
     .footerContainer{

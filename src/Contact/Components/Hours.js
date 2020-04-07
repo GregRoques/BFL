@@ -27,7 +27,7 @@ const Hours = props => {
                     </div>
                 </div>
                 <a href="https://www.facebook.com/Beds4Less" target="_blank" rel="noopener noreferrer">
-                    <img alt="Facebook" className={ cssHours.connectSocial } src="/myImages/FacebookBox.png"/>
+                    <img alt="Facebook" className={ cssHours.connectSocial } src="/myImages/facebook.png"/>
                 </a>
                 <a href="https://www.yelp.com/biz/beds-4-less-kenner" target="_blank" rel="noopener noreferrer">
                     <img alt="Yelp" className={ cssHours.connectSocial } src="/myImages/yelp.png"/>
