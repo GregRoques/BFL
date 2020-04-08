@@ -7,7 +7,7 @@ const map = () => {
             <div className={cssMap.header}>
                 Directions
             </div>
-            <iframe title="3729 Williams Blvd, Kenner" className={cssMap.mapBody} src="https://www.google.com/maps/place/Beds+4+Less/@30.0244693,-90.2392237,15z/data=!4m2!3m1!1s0x0:0xb1330ab9517646aa?sa=X&ved=2ahUKEwj-gd7WoNLoAhUrh-AKHcd9Ck4Q_BIwEnoECBkQCA"></iframe>
+            <iframe title="3729 Williams Blvd, Kenner, LA 70065" className={cssMap.mapBody} src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13817.726965072845!2d-90.2392237!3d30.0244693!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb1330ab9517646aa!2sBeds%204%20Less!5e0!3m2!1sen!2sus!4v1586300941605!5m2!1sen!2sus"></iframe>
         </div>
     );
 };

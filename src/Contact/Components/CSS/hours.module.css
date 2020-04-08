@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
+
 .hoursGrid {
     margin-top:45px;
     width:100%;
@@ -10,14 +12,14 @@
 
 .highlightDate {
     font-weight: bold;
-    color: rgb(19,163,153);
+    color: #E92427;;
 }
 
 .header{
-    font-family: "Nunito", cursive;
-    color:rgb(250,173,73);
+    font-family: 'Oleo Script', cursive;
+    color: #2677B9;
     font-size:72px;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 .connectGrid{
@@ -33,6 +35,7 @@
     position:relative;
     flex-direction: column;
     font-weight: bold;
+    font-size: 14px;
     row-gap: 1rem;
 }
 
@@ -54,15 +57,12 @@
     width: 55px;
     height: auto;
     margin-top: 40px;
-    margin-bottom: 3rem;
+    margin: 3rem 1.5rem 3rem 1.5rem;
 }
 
-/* .connectSocial + .connectSocial {
-    margin-left:25px;
-} */
 
 .weekDays {
-    font-size: 18px;
+    font-size: 24px;
 }
 
 .contactBig{
@@ -86,22 +86,28 @@
     }
 }
 
-@media screen and (max-width: 620px){
-    .contactBig{
-        display: none;
-    }
-
-    .contactSmall {
-        display:inline-block
-    }
-}
-
 @media screen and (max-width: 399px){
     .header{
         font-size:48px;
     }
 
-    .highlightDate, .hitEmWithTheFlex, .weekDays  {
-        font-size: .85rem;
+    .weekDays, .highlightDate{
+        font-size: 18px;
+    }
+
+    .hitEmWithTheFlex{
+        font-size: 16px;
+    }
+
+    .connectGrid{
+        display: block;
+    }
+
+    .hitEmWithTheFlex + .hitEmWithTheFlex{
+        margin-top: 2rem;
+    }
+
+    .header{
+        margin-bottom: 1;
     }
 }

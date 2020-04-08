@@ -50,6 +50,7 @@
     background-image: contain;
     cursor: pointer;
     font-size:30px;
+    color: #0A558F;
     font-weight: bold;
     animation: fadeIn .75s forwards;
     text-align: center;

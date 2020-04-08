@@ -8,14 +8,13 @@ const Hours = props => {
             <div className= { cssHours.seperator}>
                 <div className={ cssHours.header }>
                     <div className={cssHours.contactBig}>Call Us</div>
-                    <div className={cssHours.contactSmall}>Contact</div>
                 </div>
                 <div className={ cssHours.connectGrid }>
                     <div className={ cssHours.hitEmWithTheFlex}>
                         <a href="tel:504-305-4430">
                             <img alt="(504) 305-4430" className={ cssHours.connectContact } src={"/myImages/phone.png"}/>
                             <br/>
-                            (504) 305-4430
+                            504-305-4430
                         </a>
                     </div>
                     <div className={ cssHours.hitEmWithTheFlex}>

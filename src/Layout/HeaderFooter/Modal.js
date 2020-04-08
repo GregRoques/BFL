@@ -33,14 +33,14 @@ export const ModalMobile = ({ isOpen, close, isFadeOut }) => {
                     </div>
                         
                     <div><a href="mailto:jason@nolabeds.com?subject=New%20Question%20for%20Beds%204%20Less">
-                        Email Us
+                        Jason@nolabeds.com
                     </a></div>
                 </div>
                 <a href="https://www.facebook.com/Beds4Less" target="_blank" rel="noopener noreferrer">
-                    <img alt="Facebook" className={ cssModal.connectSocial } src="/myImages/facebook.png"/>
+                    <img alt="Facebook" className={ cssModal.connectSocial } src="/myImages/whitefb.png"/>
                 </a>
                 <a href="https://www.yelp.com/biz/beds-4-less-kenner" target="_blank" rel="noopener noreferrer">
-                    <img alt="Yelp" className={ cssModal.connectSocial } src="/myImages/yelp.png"/>
+                    <img alt="Yelp" className={ cssModal.connectSocial } src="/myImages/whiteyelp.png"/>
                 </a>
             </div>
         </div>

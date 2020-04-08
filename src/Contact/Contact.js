@@ -8,30 +8,12 @@ import Map from "./Components/Map";
 const currYear = (new Date()).getFullYear();
 
 class Contact extends Component {
-    state = {
-        isResized: true
-    }
-
-    componentDidMount () {
-        window.scrollTo(0, 0);
-
-        window.addEventListener("resize", this.logoResize);
-        window.innerWidth < 620
-            ? this.setState({ isResized: false })
-            : this.setState({ isResized: true });
-    }
-    
-    logoResize = () => {
-        window.innerWidth < 620
-            ? this.setState({ isResized: false })
-            : this.setState({ isResized: true });
-    };
 
     render () {
         return (
             <div className={ cssContact.body }>
                 <div className={ cssContact.grid }>
-                    {this.state.isResized ? <Top /> : null }
+                     <Top /> 
                     <div className={ cssContact.contactMagin}>
                         <Hours />
                         <hr/>
@@ -40,7 +22,7 @@ class Contact extends Component {
                     </div>
                     <Map />
                     <div className={ cssContact.copyright}>
-                        <div>Copyright {`${String.fromCharCode(169)}`} { currYear } Beds 4 Less Matrress Outlet</div>
+                        <div>Copyright {`${String.fromCharCode(169)}`} { currYear } Beds 4 Less</div>
                     </div>
                 </div>
             </div>

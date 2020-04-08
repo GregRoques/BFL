@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
+
 .mapBody {
     height: 400px;
     width:100%;
 }
 
 .header{
-    font-family: "Nunito", cursive;
     margin-bottom: 20px;
-    color:rgb(250,173,73);
+    font-family: 'Oleo Script', cursive;
+    color:#2677B9;
     font-size:72px;
 }
 
