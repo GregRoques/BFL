@@ -58,6 +58,40 @@ export default yelp = [
         review: "Got a great price for something that would have cost hundreds more at another place.",
         name: "Tom H.",
         link: "https://www.yelp.com/biz/beds-4-less-kenner?hrid=FFxI2xBymSNuduTMzgLGLg&utm_campaign=www_review_share_popup&utm_medium=copy_link&utm_source=(direct)"
-    }
-
+    },
+    {
+        review: "Got a great price for something that would have cost hundreds more at another place.",
+        name: "Tom H.",
+        link: "https://www.yelp.com/biz/beds-4-less-kenner?hrid=FFxI2xBymSNuduTMzgLGLg&utm_campaign=www_review_share_popup&utm_medium=copy_link&utm_source=(direct)"
+    },
+    {
+        review: "Would rate 10/5 if possible.",
+        name: "Ben G.",
+        link: "https://www.facebook.com/Beds4Less/reviews"
+    },
+    {
+        review: "I have found my bed to be high quality at a ridiculously great value.",
+        name: "Richard W.",
+        link: "https://www.facebook.com/Beds4Less/reviews"
+    },
+    {
+        review: "Highly suggest seeing them if you are looking for a great new mattress for a great price.",
+        name: "Adam K.",
+        link: "https://www.facebook.com/Beds4Less/reviews"
+    },
+    {
+        review: "I bought an awesome bed at a great price!",
+        name: "Carly L.",
+        link: "https://www.facebook.com/Beds4Less/reviews"
+    },
+    {
+        review: "Beds 4 Less has amazing deals with excellent quality merchandise!",
+        name: "Lauren E.",
+        link: "https://www.facebook.com/Beds4Less/reviews"
+    },
+    {
+        review: "The prices are the best!",
+        name: "Celeste G.",
+        link: "https://www.facebook.com/Beds4Less/reviews"
+    },
 ]
