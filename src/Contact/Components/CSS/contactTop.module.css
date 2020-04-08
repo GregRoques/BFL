@@ -1,109 +1,55 @@
-
-.topImage {
-    background-image: url("/contactPic.jpg");
-    height: 85vh;
-    background-attachment: fixed;
-    background-position: center 50px;
-    background-repeat: no-repeat;
-    background-size: 100%;
+.topBody{
+    width: 100%;
+    height: 100%;
+    margin:0 auto;
 }
 
+.topContainer{
+    margin: 0px 20% 0px 20%;
+}
+
+
+.topImage{
+    padding-right: 60%;
+    padding-top: 56.25%;
+    background-image: url("/contactPic.jpg");
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.65)
+}
 
 .topImageText{
-    position: absolute;
-    display: flex;
-    height:inherit;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: left;
-    text-indent: 50px;
+    margin: 2rem 0px 2rem 0px;
+    text-align: center;
+    color: #2677B9;
+    font-size:72px;
     font-family: 'Oleo Script', cursive;
-    font-size: 150px;
-    color: white;
-    text-shadow: 3px 3px 4px #000000;
-    /* -webkit-text-stroke: 2px white; */
+ }
+
+ @media screen and (max-width: 990px){
+    .topContainer{
+        margin: 0px 12.5% 0px 12.5%;
+    }
+
+    .topImage{
+        padding-right: 75%;
+ }
 }
 
-@media screen and (max-width: 1100px){
-    .topImage {
-        height: 75vh;
+ @media screen and (max-width: 630px){
+    .topContainer{
+        margin: 0px 5% 0px 5%;
     }
 
-}
-
-@media screen and (max-width: 990px){
-    .topImage {
-        height: 65vh;
+    .topImage{
+        padding-right: 90%;
     }
+ }
 
-    .topImageText{
-        font-size: 125px;
-    }
-}
-
-@media screen and (max-width: 890px){
-    .topImage {
-        height: 55vh;
-    }
-
-    .topImageText{
-        /* top: 25px; */
-        font-size: 95px;
-    }
-}
-
-@media screen and (max-width: 760px){
-
-    .topImage {
-        height: 45vh;
-    }
-
-    .topImageText{
- 
-        font-size: 85px;
-        text-shadow: 2px 2px 3px black;
-    }
-}
-
-@media screen and (max-width: 630px){
-
-    .topImage {
-        height: auto;
-        width: 100%;
-        background-size: cover;
-        background-position: top left;
-        background-attachment: unset;
-        height: 350px;
-    }
-
-    .topImageText{
-        align-content: center;
-        align-items: center;
-        justify-content: center;
-        text-indent: 0px;
-        width: 100%;
-        font-size: 85px;
-    }
-}
-
-@media screen and (max-width: 500px){
-
-    .topImage {
-        height: 275px;
-    }
-
-    .topImageText{
-        font-size: 75px;
-    }
-}
-
-@media screen and (max-width: 399px){
-
-    .topImage {
-        height: 200px;
-    }
-
-    .topImageText{
-        font-size: 55px;
+ @media screen and (max-width: 399px){
+    .header{
+        font-size:55px;
     }
 }

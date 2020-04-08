@@ -3,9 +3,12 @@ import cssTop from "./CSS/contactTop.module.css";
 
 const ContactTop = props => {
     return (
-        <div className={ cssTop.topImage }>
-            <div className= {cssTop.topImageText }>
-               Contact
+        <div className={cssTop.topBody}>
+            <div className={cssTop.topContainer}>
+                <div className= {cssTop.topImageText }>
+                    Contact
+                </div>
+                <div className={ cssTop.topImage }></div>
             </div>
         </div>
     );
