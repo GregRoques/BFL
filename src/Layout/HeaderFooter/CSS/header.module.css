@@ -26,8 +26,7 @@
     position: fixed;
     height: 55px;
     width:auto;
-    z-index:104;
-
+    z-index:500;
 } 
 
 .headerContainerSmallText{
@@ -67,9 +66,16 @@
 }
 
 @media screen and (min-width: 619px){
-
     .headerContainer{
         border-bottom: none;
+    }
+}
+
+@media screen and (max-width: 399px){
+
+    .B4Llogo{
+        top:10px;
+        height: 45px
     }
 
 }

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { mapSelector } from "../../Functions/MapSelector";
 import cssModal from "./CSS/modal.module.css";
 
-export const ModalMobile = ({ isOpen, close, isFadeOut }) => {
+const Modal = ({ isOpen, close, isFadeOut }) => {
     return isOpen ? (
         <div className = { !isFadeOut ? cssModal.modalPositionOpen : cssModal.modalPositionClose }>
             <div className = { !isFadeOut ? cssModal.modalContainer : cssModal.modalDisappear}>
@@ -47,12 +47,5 @@ export const ModalMobile = ({ isOpen, close, isFadeOut }) => {
     ) : null;
 };
 
-export const ModalDesktop = ({ isOpen, close, isFadeOut }) => {
-    return isOpen ? (
-        <div>
-            
-        </div>
-    ) : null;
-}
-
+export default Modal;
 

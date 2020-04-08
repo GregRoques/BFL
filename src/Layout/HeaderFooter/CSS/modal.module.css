@@ -78,6 +78,7 @@
     animation: textDisplay .5s forwards;
     animation-delay: .5s;
     opacity:0;
+    top:70px;
 }
 
 @media screen and (max-height: 699px) and (min-width: 577px){

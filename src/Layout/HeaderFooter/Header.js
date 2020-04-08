@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import cssHeader from "./CSS/header.module.css";
-import { ModalMobile, ModalDesktop } from "./Modal";
+import Modal from "./Modal";
 
 const isiPad = navigator.userAgent.match(/iPad/i) !== null;
 
@@ -38,12 +38,7 @@ class Header extends Component {
     render () {
         return (
             <div>
-                <ModalMobile
-                    isOpen={ this.state.isOpen }
-                    close={ this.modalToggler}
-                    isFadeOut = {this.state.isFadeOut}
-                />
-                <ModalDesktop
+                <Modal
                     isOpen={ this.state.isOpen }
                     close={ this.modalToggler}
                     isFadeOut = {this.state.isFadeOut}
