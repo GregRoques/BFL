@@ -25,7 +25,7 @@ class CoronaUpdate extends Component {
         return this.state.isCaronaOpen ? (
             <div className={covidCSS.frame}>
                 <div className={covidCSS.closeButton} onClick={() => this.popUpToggle(false)}>X</div>
-                <img className={covidCSS.picture} src="/corona.jpg"/>
+                <img alt="Pop Up Message" className={covidCSS.picture} src="/corona.jpg"/>
             </div>
         ) : null;
     }

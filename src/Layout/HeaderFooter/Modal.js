@@ -10,14 +10,14 @@ const Modal = ({ isOpen, close, isFadeOut }) => {
                 <span className={ cssModal.subService  } onClick={ () => close("close")}>
                     <Link to= "/">Home</Link>
                 </span>
-                <span className={ cssModal.subService  } onClick={ () => close("close")}>
-                    <Link to= "/about/products">Our Products</Link>
+                <span className={ cssModal.subService  } onClick={ () => close("/about")}>
+                    <Link to= "/about">Our Products</Link>
                 </span>
-                <span className={ cssModal.subService } onClick={ () => close("/about/guide")} >
-                    <Link to= "/about/guide">Shopping Guide</Link>
+                <span className={ cssModal.subService } onClick={ () => close("/shop")} >
+                    <Link to= "/shop">Shopping Guide</Link>
                 </span>
-                <span className={ cssModal.subService } onClick={ () => close("/about/sos") } >
-                    <Link to= "/about/sos">The Science of Sleep</Link>
+                <span className={ cssModal.subService } onClick={ () => close("/sos") } >
+                    <Link to= "/sos">The Science of Sleep</Link>
                 </span>
                 <span className={ cssModal.subService} onClick={ () => close("/contact") }t>
                     <Link to= "/contact">Contact</Link>

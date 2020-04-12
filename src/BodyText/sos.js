@@ -1,4 +1,4 @@
-export default sos = [
+const sos = [
     {
         header: "Did You Know?",
         body: [
@@ -21,13 +21,13 @@ export default sos = [
     },
     {
         header: "Stress",
-        body: `Stress is robbing many Americans of the good night’s sleep they need to be healthy and productive. And the consequences of a poor night’s sleep – increased mistakes, difficulty concentrating, and irritability – only compound the stresses of life. But it does not have to be this way.
+        body: [`Stress is robbing many Americans of the good night’s sleep they need to be healthy and productive. And the consequences of a poor night’s sleep – increased mistakes, difficulty concentrating, and irritability – only compound the stresses of life. But it does not have to be this way.
 
-        By taking control of your sleep environment and starting each day with a good night’s sleep, you can effectively reduce stress and improve your quality of life. Why wait? Start sleeping better tonight!`
+        By taking control of your sleep environment and starting each day with a good night’s sleep, you can effectively reduce stress and improve your quality of life. Why wait? Start sleeping better tonight!`]
     },
     {
         header: "Good Health Begins with a Good Night’s Sleep",
-        body: "A good night’s sleep is an essential part of a healthy lifestyle. It affects all aspects of your day – from how you feel, to your relationships, productivity, and ultimately, your quality of life. While you sleep, your brain goes to work, consolidating the day’s learning into memory and reenergizing the body. The average individual requires 7-8 hours of sleep per night, but it differs for everyone. Some people may need as much as 10 hours a night, while others need much less. It is a safe bet, however, that if you sleep longer on the weekends than you do during the week, you are not meeting your personal sleep requirement."
+        body: ["A good night’s sleep is an essential part of a healthy lifestyle. It affects all aspects of your day – from how you feel, to your relationships, productivity, and ultimately, your quality of life. While you sleep, your brain goes to work, consolidating the day’s learning into memory and reenergizing the body. The average individual requires 7-8 hours of sleep per night, but it differs for everyone. Some people may need as much as 10 hours a night, while others need much less. It is a safe bet, however, that if you sleep longer on the weekends than you do during the week, you are not meeting your personal sleep requirement."]
     },
     {
         header: "Better Sleep Tips",
@@ -45,13 +45,15 @@ export default sos = [
 
     {
         header: "A Comfortable Bed – The Foundation of a Good Night’s Sleep",
-        body: `You spend more time on your bed than on any other piece of furniture in your home, and you rely on it more for your feelings of comfort and well being. That is why it is so important to find the right mattress for you.
+        body: [`You spend more time on your bed than on any other piece of furniture in your home, and you rely on it more for your feelings of comfort and well being. That is why it is so important to find the right mattress for you.
 
         Consider these questions:
         
         Are you sleeping better or worse than you were one year ago?
         Are you waking up feeling stiff and sore?
         Did you have your best night’s sleep somewhere other than your own bed?
-        You can avoid sleepless nights by carefully evaluating the comfort and support of your sleep set twice a year to make sure your personal comfort preferences are met. To get started on selecting a good mattress – one tailored to your individual needs – it helps to become familiar with the basic elements of a comfortable bed.`
+        You can avoid sleepless nights by carefully evaluating the comfort and support of your sleep set twice a year to make sure your personal comfort preferences are met. To get started on selecting a good mattress – one tailored to your individual needs – it helps to become familiar with the basic elements of a comfortable bed.`]
     }
 ]
+
+export default sos;

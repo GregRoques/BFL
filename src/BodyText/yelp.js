@@ -1,4 +1,4 @@
-export default yelp = [
+const yelp = [
     {
         review: "Beds 4 Less has great prices, and such friendly and knowledgeable employees!",
         name: "Lauren L.",
@@ -95,3 +95,5 @@ export default yelp = [
         link: "https://www.facebook.com/Beds4Less/reviews"
     },
 ]
+
+export default yelp;

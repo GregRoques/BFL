@@ -4,17 +4,15 @@ import cssApp from './app.module.css';
 
 import Layout from "./Layout/HOC/Layout";
 import Home from "./Home/Home";
-import Faq from "./Faq/Faq";
+import About from "./Faq/about";
+import Shop from "./Faq/shop";
+import SOS from "./Faq/sos";
 import Contact from "./Contact/Contact";
 
 class App extends Component {
   NoPage = () => {
     return <Redirect push to={Home} />;
 };
-
-serviceAbout = () => {
-    return <Redirect push to="/faq/about" />;
-}
 
   render() {
     return (
@@ -23,8 +21,9 @@ serviceAbout = () => {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/contact" component={Contact} />
-            <Route exact path="/faq" component={this.FaqMain} />
-            <Route exact path="/faq/:param" component={Faq} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/shop" component={Shop} />
+            <Route exact path="/sos" component={SOS} />
             <Route component={this.NoPage} />
           </Switch>
         </Layout>
