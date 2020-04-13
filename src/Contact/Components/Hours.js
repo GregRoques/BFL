@@ -42,7 +42,7 @@ const Hours = props => {
     
                 </div> <br/>
                 <div className= { dayNum === 1 || dayNum === 0 ? cssHours.highlightDate : null }>
-                    <div>Saturday – Sunday<br/> Closed</div>
+                    <div>Sunday – Monday<br/> Closed</div>
                 </div>
             </div>
         </div>

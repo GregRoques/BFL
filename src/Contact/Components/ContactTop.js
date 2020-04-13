@@ -1,7 +1,7 @@
 import React from "react";
 import cssTop from "./CSS/contactTop.module.css";
 
-const ContactTop = props => {
+const ContactTop = () => {
     return (
         <div className={cssTop.topBody}>
             <div className={cssTop.topContainer}>

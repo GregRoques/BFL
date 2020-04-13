@@ -14,7 +14,7 @@
     /* background-color: rgb(65,173,73); */
     padding: 5px;
     position: fixed;
-    /* box-shadow:0 1px 6px rgba(2, 15, 7, 0.5); */
+    box-shadow:0 1px 6px rgba(2, 15, 7, 0.5); 
     z-index:102;
     /* border-bottom: 1px solid black; */
 } 

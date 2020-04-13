@@ -16,7 +16,7 @@
     background-position: top left;
     background-repeat: no-repeat;
     background-size: cover;
-    /* border-radius: 25px; */
+    border-radius: 25px; 
     box-shadow: 3px 3px 3px rgba(0,0,0,0.65)
 }
 
@@ -24,7 +24,7 @@
     margin: 2rem 0px 2rem 0px;
     text-align: center;
     color: #2677B9;
-    font-size:72px;
+    font-size:90px;
     font-family: 'Oleo Script', cursive;
  }
 
