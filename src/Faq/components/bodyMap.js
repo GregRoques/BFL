@@ -9,7 +9,7 @@ const bodyMap = (image, pageHeader, currArray) => {
         background-image: url(/about/${image}.jpg)
     `
         return (
-            <div className={cssFaq.topBody}>
+            <div>
                 <div className={cssFaq.topContainer}>
                     <div className= {cssFaq.topImageText }>
                         {pageHeader}
@@ -19,8 +19,10 @@ const bodyMap = (image, pageHeader, currArray) => {
                 <div>
                     { currArray.map(info=>{
                         return(
-                            <div>
-                                {info.header}
+                            <div className={cssFaq.faqTextContainer}>
+                                <div className={cssFaq.faqTextHeader}>
+                                    {info.header}
+                                </div>
                                 {
                                    info.body.map(subInfo =>{
                                             return (

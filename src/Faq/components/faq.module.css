@@ -2,8 +2,8 @@
     position:relative;
     width: 100%;
     height: 100%;
-    top:30px;
-    margin-bottom: 6rem;
+    top:60px;
+    margin-bottom: 4rem;
 }
 
 .topContainer{
@@ -12,10 +12,9 @@
 
 
 .topImage{
-
     padding-right: 60%;
     padding-top: 56.25%;
-    /* background-image: url("/contactPic.jpg"); */
+    margin-bottom: 3rem;
     background-position: center;
     background-repeat: no-repeat; 
     background-size: cover;
@@ -30,6 +29,21 @@
     font-size:72px;
     font-family: 'Oleo Script', cursive;
  }
+
+ .faqTextContainer{
+     text-align: left;
+     margin: 0px 2rem 0px 2.5rem;
+ }
+
+ .faqTextHeader{
+    font-family: 'Oleo Script', cursive;
+    font-size: 36px;
+    color: #2677B9;
+    margin: 2rem 0px 1rem 0px;
+
+ }
+
+ /* =========================== Media Screen */
 
  @media screen and (max-width: 990px){
     .topContainer{

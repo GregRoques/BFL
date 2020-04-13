@@ -40,6 +40,7 @@
     flex-direction:row;
     justify-content: flex-end;
     align-items: center;
+    user-select: none;
     /* font-weight: 500; */
 }
 
@@ -75,7 +76,8 @@
 
     .B4Llogo{
         top:10px;
-        height: 45px
+        height: 45px;
+        left:10px;
     }
 
 }
