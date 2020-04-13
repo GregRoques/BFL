@@ -1,7 +1,9 @@
 .topBody{
+    position:relative;
     width: 100%;
     height: 100%;
-    margin-top:75px;
+    top:30px;
+    margin-bottom: 6rem;
 }
 
 .topContainer{

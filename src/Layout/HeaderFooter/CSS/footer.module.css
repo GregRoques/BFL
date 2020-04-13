@@ -11,6 +11,7 @@
     animation-fill-mode: forwards;
     text-align: center;
     background-color: #09548F;
+    border-top: 12px solid white;
     color:black
 }
 
