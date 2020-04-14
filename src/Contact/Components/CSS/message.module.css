@@ -137,3 +137,8 @@ input:placeholder-shown, textarea:placeholder-shown{
   100% { opacity: 1; }
 }
 
+@media screen and (max-width: 958px){
+    .messageForm{
+        height: 275px;
+    }
+}

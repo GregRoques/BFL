@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import cssContact from "./contact.module.css";
 import Top from "./Components/ContactTop";
 import Hours from "./Components/Hours";
@@ -7,27 +7,27 @@ import Message from "./Components/Message";
 
 const currYear = (new Date()).getFullYear();
 
-class Contact extends Component {
+const Contact = () => {
 
-    render () {
-        return (
-            <div className={ cssContact.body }>
-                <div className={ cssContact.grid }>
-                     <Top /> 
-                    <div className={ cssContact.contactMagin}>
-                        <Hours />
-                        <hr/>
-                         <Message />
-                        <hr/> 
-                    </div>
-                    <Map />
-                    <div className={ cssContact.copyright}>
-                        <div>Copyright {`${String.fromCharCode(169)}`} { currYear } Beds 4 Less</div>
-                    </div>
+    window.scrollTo(0, 0);
+
+    return (
+        <div className={ cssContact.body }>
+            <div className={ cssContact.grid }>
+                    <Top /> 
+                <div className={ cssContact.contactMagin}>
+                    <Hours />
+                    <hr/>
+                        <Message />
+                    <hr/> 
+                </div>
+                <Map />
+                <div className={ cssContact.copyright}>
+                    <div>Copyright {`${String.fromCharCode(169)}`} { currYear } Beds 4 Less</div>
                 </div>
             </div>
-        );
-    }
+        </div>
+    );
 };
 
 export default Contact;
