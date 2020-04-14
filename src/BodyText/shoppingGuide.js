@@ -24,7 +24,7 @@ const shoppingGuide = [
     },
     {
         header: "What to Look for When Buying a Mattress",
-        body: [`<b>COMFORT.</b> Gone are the days when a mattress had to be stiff-as-a-board to be good for you. And it is interesting to note that recent studies suggest that a medium-firm mattress is more likely to improve back pain than a firm mattress.
+        body: [`<b style="color: #E92427">COMFORT.</b> Gone are the days when a mattress had to be stiff-as-a-board to be good for you. And it is interesting to note that recent studies suggest that a medium-firm mattress is more likely to improve back pain than a firm mattress.
 
 You will sleep best when your bed helps you feel cradled in comfort. Today’s top quality mattress/foundation ensembles are built for just that – superior comfort. Luxurious new cushioning materials and extra-soft surface treatments create more of a plush, comfortable feel.`]
     },
@@ -58,16 +58,16 @@ You will sleep best when your bed helps you feel cradled in comfort. Today’s t
     {
         header: "Mattress Terms",
         body: [`<b>Ticking –</b> The mattresses outermost layer.
-        <br/>
+        <br/><br/>
 <b>Upholstery Layers –</b> Materials used under the quilt to add to the comfort and firmness of the mattress.
 <br/><br/>
 <b>Standard Foams –</b> There are countless types of foam materials with a variety of different feels. They can consist of man made materials (mainly polyurethane), and natural fibers such as wool, cashmere, and silk.  
 <br/><br/>
 <b>Specialty Foams –</b> Latex and Visco Elastic Memory Foam each have their own unique properties.
-<br/>
-· Latex Foam is a natural, biodegradable foam, that comes from the rubber tree found in the rain forests of South America. Farmers view the latex as a replenishable source of income that outweighs the value of the land to a logging operation. Each bed made helps save 8.5 acres of virgin rain forest from being chopped down. Latex contours to your body, distributes your body weight evenly, minimizes pressure points, reduces motion transfer, is naturally resistant to bacteria, mold, mildew, mites, and other odor causing germs, and has an open cell structure that enables the mattress to breathe – allowing the release of body heat and moisture.
-<br/>
-· Visco Foam is a man made foam that reacts to body temperature and body weight, conforming and molding to the shape of your body. This is the foam that was developed for NASA to provide comfort for traveling astronauts. Visco molds and contours to your body, spreading your weight over the entire sleeping surface. When you move, the foam gradually returns to its original position. It minimizes pressure points, reduces motion transfer, and is highly resistant to bacteria, mold, mildew, mites, and other odor causing germs. Another benefit to Visco Foam mattresses is that they do not need to be turned.
+<br/><br>
+<i style="margin-left: 1rem; font-weight: 800; color: #166DB4">· Latex Foam</i> is a natural, biodegradable foam, that comes from the rubber tree found in the rain forests of South America. Farmers view the latex as a replenishable source of income that outweighs the value of the land to a logging operation. Each bed made helps save 8.5 acres of virgin rain forest from being chopped down. Latex contours to your body, distributes your body weight evenly, minimizes pressure points, reduces motion transfer, is naturally resistant to bacteria, mold, mildew, mites, and other odor causing germs, and has an open cell structure that enables the mattress to breathe – allowing the release of body heat and moisture.
+<br/><br/>
+<i style="margin-left: 1rem; font-weight: 800; color: #166DB4">· Visco Foam</i> is a man made foam that reacts to body temperature and body weight, conforming and molding to the shape of your body. This is the foam that was developed for NASA to provide comfort for traveling astronauts. Visco molds and contours to your body, spreading your weight over the entire sleeping surface. When you move, the foam gradually returns to its original position. It minimizes pressure points, reduces motion transfer, and is highly resistant to bacteria, mold, mildew, mites, and other odor causing germs. Another benefit to Visco Foam mattresses is that they do not need to be turned.
 <br/><br/>
 <b>Innerspring –</b> Provides even distribution and support for proper spine alignment.
 <br/><br/>
@@ -91,14 +91,14 @@ You will sleep best when your bed helps you feel cradled in comfort. Today’s t
     },
     {
         header: " When You Get Your Mattress Home",
-        body: [`<i>You can increase the lifetime of your mattress with a few simple procedures.</i>
-
+        body: [`<i><b>You can increase the lifetime of your mattress with a few simple procedures.</i></b>
+        <br/><br/>
 <b>Rotating Your Mattress –</b>  Mattresses today are made much thicker than they used to be. Because of that, you may notice body impressions developing. This is an indication that your mattress is performing properly and conforming to your body. This is not a defect, but totally normal. To equalize these impressions, it is recommended that you rotate your mattress every 30 days during the first year. Thereafter, your mattress should be rotated every three months. If you have a one-sided mattress rotate the mattress from end to end – that is, move the mattress 180 degrees. The foot of the mattress is now at the head, and vice versa. If you have a two-sided mattress, rotate it as above, and then turn it over so the bottom is now on top.
-
+<br/><br/>
 <b>Cleaning –</b>  It is recommended that a mattress pad be used on your new mattress. Vacuuming is the only recommended cleaning method. If you must clean a stain use a mild soap with cold water and dry thoroughly.
-
+<br/><br/>
 <b>Foundation –</b>  The purpose of the foundation or box spring is to extend the life of the mattress.
-
+<br/><br/>
 <b>Frames –</b>  A good quality mattress should be supported by a good quality frame. King and Queen mattress’s should be supported by frames that include a strong cross support to prevent sagging and add years to the life of your mattress set.`]
     }
 ];

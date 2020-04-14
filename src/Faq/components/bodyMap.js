@@ -12,7 +12,7 @@ const bodyMap = (image, pageHeader, currArray) => {
             <div>
                 <div className={cssFaq.topContainer}>
                     <div className= {cssFaq.topImageText }>
-                        {pageHeader}
+                        {ReactHtmlParser(pageHeader)}
                     </div>
                     <div className={ [headerImage, cssFaq.topImage].join(" ") }></div>
                 </div>
@@ -26,8 +26,9 @@ const bodyMap = (image, pageHeader, currArray) => {
                                 {
                                    info.body.map(subInfo =>{
                                             return (
-                                                <div>
+                                                <div className={cssFaq.faqBodyText}>
                                                     {info.body.length > 1 ? "•" : null } {ReactHtmlParser(subInfo)}
+                                                    <br className={cssFaq.breakClass}/><br className={cssFaq.breakClass}/>
                                                 </div>
                                             )
                                         })     

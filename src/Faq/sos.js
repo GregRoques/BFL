@@ -6,7 +6,7 @@ import sleepBody from "../BodyText/sos";
 const SOS = () => {
         return (
             <div className={cssFaq.topBody}>
-                { bodyMap("sos", "The Science of Sleep", sleepBody) }
+                { bodyMap("sos", "The Science<br/>of Sleep", sleepBody) }
             </div>
         )
     }
