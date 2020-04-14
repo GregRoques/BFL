@@ -30,3 +30,23 @@
  .homeHeader span{
      color: #E92427;
  }
+
+ .LAproud{
+     background-image: url("/louisiana.png");
+     background-size: contain;
+     background-repeat: no-repeat;
+     background-position: center;
+     padding: 2rem;
+     direction: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     align-content:center;
+ }
+
+ .LaHeader{
+    text-align: center;
+    color: #2677B9;
+    font-size:48px;
+    font-family: 'Oleo Script', cursive;
+ }
