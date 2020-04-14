@@ -10,7 +10,6 @@
     margin: 0px 20% 0px 20%;
 }
 
-
 .topImage{
     padding-right: 60%;
     padding-top: 56.25%;
@@ -64,7 +63,7 @@
  }
 }
 
- @media screen and (max-width: 630px){
+ @media screen and (max-width: 767px){
     .topContainer{
         margin: 0px 5% 0px 5%;
     }
