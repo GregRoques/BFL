@@ -65,7 +65,7 @@
 @media screen and (max-width: 735px){
     .snapGrid{
         grid-template-columns: 100%;
-
+        margin: 4rem 0px 1rem 0px;
     }
 
     .snapImage:hover{
