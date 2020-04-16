@@ -9,6 +9,7 @@
 
 .closeButton{
     font-size: 18px;
+    font-weight: 900;
     width:28px;
     background-color: white;
     padding:5px;
@@ -16,7 +17,7 @@
     animation: closeFade 10s forwards;
     text-align: center;
     border-radius: 5px;
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
 .closeButton:hover{

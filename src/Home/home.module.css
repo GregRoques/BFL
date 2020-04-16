@@ -25,6 +25,7 @@
      margin: 0px 3rem 2rem 3rem;
      font-size: 16px;
      color: black;
+     line-height: 24px;
  }
 
  .homeHeader span{
@@ -49,4 +50,5 @@
     color: #2677B9;
     font-size:48px;
     font-family: 'Oleo Script', cursive;
+  
  }

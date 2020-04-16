@@ -89,6 +89,7 @@
 @media screen and (max-width: 399px){
     .header{
         font-size:55px;
+        margin-bottom: 1;
     }
 
     .weekDays, .highlightDate{
@@ -107,7 +108,4 @@
         margin-top: 2rem;
     }
 
-    .header{
-        margin-bottom: 1;
-    }
 }

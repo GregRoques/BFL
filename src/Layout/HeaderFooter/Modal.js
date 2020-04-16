@@ -28,7 +28,7 @@ const Modal = ({ isOpen, close, isFadeOut }) => {
                         <b>(504) 305-4430</b>
                     </a></div>
 
-                    <div title="Open Map" onClick ={() => mapSelector("https://www.google.com/maps/place/Beds+4+Less/@30.0244693,-90.2392237,15z/data=!4m5!3m4!1s0x0:0xb1330ab9517646aa!8m2!3d30.0244693!4d-90.2392237")} >
+                    <div title="Open Map" onClick ={() => mapSelector()} >
                         <a>3729 Williams Blvd • Kenner</a>
                     </div>
                         
