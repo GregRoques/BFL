@@ -25,7 +25,7 @@ class Home extends Component {
                     <div className={cssHome.LaHeader}>
                         Louisiana Proud
                     </div>
-                    <div className={cssHome.homeSubHeader}>
+                    <div className={cssHome.LaSubHeader}>
                         Beds 4 Less is a locally owned and operated business. We are proud to serve the New Orleans Metropolitan Area. 
                     </div>
                 </div>

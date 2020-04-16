@@ -29,11 +29,13 @@ class YelpReviews extends Component {
                 </div>
                 <div key={currNum} className={cssYelp.enterCustomer}>
                     <div>
-                        “{yelp[currNum].review}”
+                        <span>“</span>{yelp[currNum].review}<span>”</span>
                     </div>
-                    <a className={cssYelp.customer} href={yelp[currNum].link} target="_blank" rel="noopener noreferrer">
-                        {yelp[currNum].name}
-                    </a>
+                    <div>
+                        <a className={cssYelp.customer} href={yelp[currNum].link} target="_blank" rel="noopener noreferrer">
+                            –{yelp[currNum].name}, <i>{yelp[currNum].link.includes("www.yelp.com") ? "Yelp" : "Facebook"}</i>
+                        </a>
+                    </div>
                 </div>
             </div>
         )

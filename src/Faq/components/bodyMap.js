@@ -9,7 +9,7 @@ const bodyMap = (image, pageHeader, currArray) => {
         background-image: url(/about/${image}.jpg)
     `
         return (
-            <div>
+            <div className={cssFaq.faqFadeIn}>
                 <div className={cssFaq.topContainer}>
                     <div className= {cssFaq.topImageText }>
                         {ReactHtmlParser(pageHeader)}

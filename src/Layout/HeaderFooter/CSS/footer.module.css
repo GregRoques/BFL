@@ -4,11 +4,6 @@
     height: 25px;
     bottom: 2%;
     padding: 0 0 5px 0;
-    opacity:0;
-    animation-name: fadeIn;
-    animation-duration:1s;
-    animation-delay:0.5s;
-    animation-fill-mode: forwards;
     text-align: center;
     background-color: #09548F;
     border-top: 12px solid white;
@@ -38,15 +33,6 @@
 
 .address{
     cursor: pointer;
-}
-
-@keyframes fadeIn{
-    0%{
-        opacity:0;
-    }
-    100%{
-        opacity:1;
-    }
 }
 
 .visibleBig{
