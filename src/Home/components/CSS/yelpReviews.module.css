@@ -9,7 +9,7 @@
  .yelpBody{
      position: relative;
      width: 100%;
-     margin-bottom: 3rem;
+     margin-bottom: 0rem;
      height:250px;
  }
 
@@ -101,6 +101,7 @@
     .yelpHeader{
         font-size:36px;
         line-height: 40px;
+        
      }
 
      .enterCustomer{
@@ -116,6 +117,7 @@
 
     .yelpBody{
         height:225px;
+        /* margin-bottom:1rem; */
     }
 }
 
