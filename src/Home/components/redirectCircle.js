@@ -3,7 +3,7 @@ import cssCircles from "./CSS/circles.module.css";
 import { css } from "emotion";
 import { Redirect } from "react-router-dom";
 
-const categories = ["About", "Shop", "Science of Sleep"];
+const categories = ["Our Products", "Shopping Guide", "Science of Sleep"];
 
 const disappearingClass = css`
     opacity: 0;
@@ -20,9 +20,9 @@ class Circles extends Component{
     displayCircles = ({ forwardAddress, titleIndex }) => {
         const nextPage = forwardAddress === "Science of Sleep" 
             ? "sos" 
-                : forwardAddress === "About" 
-                    ? "about_closeup"
-                        :  forwardAddress.toLowerCase();
+                : forwardAddress === "Our Products" 
+                    ? "about"
+                        :  "shop";
         const fadeAway = titleIndex;
         const backgroundCircle = css`
         background-image: url("/about/${nextPage}.jpg");`;

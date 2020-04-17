@@ -57,6 +57,7 @@
 }
 
 .mapHover:hover{
+    color: #E92427;
     cursor:pointer;
 }
 
