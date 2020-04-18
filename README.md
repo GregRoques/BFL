@@ -38,4 +38,4 @@ Company website for New Orleans-based mattress retailer.
 ## Desktop/Mobile Preview
 ### Click image below to view video
 
-[![desktop and mobile video](/public/readMe/1.png)](https://youtu.be/qWeFqC_XBBk)
+[![desktop and mobile video](/public/readMe/1.png)](https://youtu.be/lECg73mmMkA)
