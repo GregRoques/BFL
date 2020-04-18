@@ -3,7 +3,6 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const helmet = require("helmet");
-// const { createProxyMiddleware } = require("http-proxy-middleware");
 const myContacts = require("./routes/personalData");
 
 const app = express();
