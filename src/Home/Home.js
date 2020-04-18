@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <div className={cssHome.homeBody}>
             <div className={cssHome.homeHeader}>
-                Famous Name Brand Mattresses <br/>
+                Name Brand Mattresses <br/>
                 Up to <span>80% Off</span> Retail Pricing
             </div>
             <div className={cssHome.homeSubHeader}>
