@@ -8,6 +8,7 @@ import About from "./Faq/about";
 import Shop from "./Faq/shop";
 import SOS from "./Faq/sos";
 import Contact from "./Contact/Contact";
+import Reviews from "./Reviews/Reviews"
 
 class App extends Component {
   NoPage = () => {
@@ -24,6 +25,7 @@ class App extends Component {
             <Route exact path="/about" component={About} />
             <Route exact path="/shop" component={Shop} />
             <Route exact path="/sos" component={SOS} />
+            <Route exact path= "/review" component= { Reviews } />
             <Route component={this.NoPage} />
           </Switch>
         </Layout>
