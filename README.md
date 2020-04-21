@@ -39,3 +39,9 @@ Company website for New Orleans-based mattress retailer.
 ### Click image below to view video
 
 [![desktop and mobile video](/public/readMe/1.png)](https://youtu.be/lECg73mmMkA)
+
+### nolabeds.com/review 
+
+* A secret page to let customers write reviews and share the website with friends.
+
+![desktop and mobile video](/public/readMe/review.jpg)
