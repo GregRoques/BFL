@@ -20,7 +20,12 @@ const Reviews = props => {
                 </span>
                 <span>
                     <a target="_blank" rel="noopener noreferrer" href="https://www.yelp.com/writeareview/biz/Fr7pQ3blnqbbNxKVUGNv0g?return_url=%2Fbiz%2FFr7pQ3blnqbbNxKVUGNv0g&source=biz_details_war_button" >
-                        <img className={ cssReviews.yelpReview } src="/reviewImages/yelpReview.png" alt="Google Review"/>
+                        <img className={ cssReviews.yelpReview } src="/reviewImages/yelpReview.png" alt="Yelp Review"/>
+                    </a>
+                </span>
+                <span>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.google.com" >
+                        <img className={ cssReviews.yelpReview } src="/reviewImages/gglReview.png" alt="Google Review"/>
                     </a>
                 </span>
             </div>
@@ -30,7 +35,7 @@ const Reviews = props => {
             </div>
             <div>
                 <span>
-                    <a href="mailto:?subject=Check%20Out%20Beds%204%20Less&body=\n\nhttps://www.nolabeds.com">
+                    <a href="mailto:?subject=Check%20Out%20Beds%204%20Less&body=I%20just%20got%20a%20great%20new%20mattress%20from%20Beds%204%20Less.%20Check%20them%20out:%20https://www.nolabeds.com">
                         <img className={ cssReviews.reviewSocialEmail} src="/reviewImages/emailShare.png" alt="Email Icon"/>
                     </a>
                 </span>
