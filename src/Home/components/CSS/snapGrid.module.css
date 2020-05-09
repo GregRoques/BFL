@@ -16,6 +16,7 @@
     margin: 0.5rem 10% 0.5rem 10%;
     width:80%;
     object-fit: contain;
+    transition: .5s;
 }
 
 .snapHomeImage{
@@ -77,6 +78,7 @@
     .snapImage{
         margin: 1rem 12.5% 0.5rem 12.5%;
         width:75%;
+        transition: none;
     }
 
     .seperator{
