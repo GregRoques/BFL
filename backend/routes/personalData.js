@@ -12,12 +12,12 @@ const transporter = nodemailer.createTransport(sendgridTransport({
 
 
 const phoneFormat = ph => {
-    if (ph.length >= 10) {
-        const onlyNumbers = ph.replace(/\D/g, "");
+    const onlyNumbers = ph.replace(/\D/g, "");
+    if (onlyNumbers.length == 10) {
         const newNumber = onlyNumbers.substring(0, 3) + "-" + onlyNumbers.substring(3, 6) + "-" + onlyNumbers.substring(6, 10);
         return newNumber;
     } else {
-        return 0;
+        return "None Provided";
     }
 };
 
@@ -28,12 +28,12 @@ router.post("/personalData", (req, res, next) => {
     const sendDate = new Date().toISOString().slice(0, 10);
 
     transporter.sendMail({
-        to: "jason@nolabeds.com",
+        to: "jfeder44@gmail.com", //jason@nolabeds.com, 
         from: email,
         subject: `${subject}`,
         html: `<b>From:</b> ${name} <br/> 
         <b>Email:</b> ${email} <br/>
-        ${phoneEdit.length > 2 ? "<b>Phone:</b> " + phoneEdit + "<br/>" : "<br/>"}
+        <b>Phone:</b> ${phoneEdit} <br/>
         <b>Date:</b> ${sendDate} <br/><br/>
         ${message}`
     }).then(() => {
