@@ -2,11 +2,12 @@
 <VirtualHost *:80>
     DocumentRoot /var/www/BFL/backend/public
     ServerName nolabeds.com
+    ServerAlias www.nolabeds.com
     <Directory "/var/www/BFL/backend/public">
         allow from all
         AllowOverride All
         Order allow,deny
-        Options +Indexes
+        Options -Indexes
     </Directory>
     <Location "/">
         ProxyPreserveHost On
