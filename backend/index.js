@@ -1,24 +1,17 @@
 const express = require("express");
-const path = require("path");
-const bodyParser = require("body-parser");
+const app = express();
 const cors = require("cors");
 const helmet = require("helmet");
-const myContacts = require("./routes/personalData");
 
-const app = express();
+const personalData = require("./routes/personalData");
 
 app.use(cors());
 app.use(helmet());
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
-app.use(myContacts);
-
-app.use(express.static(path.join(__dirname, "public")));
-app.get("/*", (req, res, next) => {
-    res.sendFile(path.join(__dirname, "public", "index.html"));
-});
+app.use("/personalData", personalData);
 
 const PORT = 2000;
 app.listen(PORT, () => {
