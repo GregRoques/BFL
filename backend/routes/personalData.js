@@ -23,24 +23,29 @@ const phoneFormat = ph => {
 
 
 router.post("/", (req, res) => {
-    const { name, email, phone, message, subject } = req.body;
-    const phoneEdit = phoneFormat(phone);
-    const sendDate = new Date().toISOString().slice(0, 10);
+    try{
+        const { name, email, phone, message, subject } = req.body;
+        
+        const phoneEdit = phoneFormat(phone);
+        const sendDate = new Date().toISOString().slice(0, 10);
 
-    transporter.sendMail({
-        to: "jason@nolabeds.com", //"jfeder44@gmail.com" 
-        from: email,
-        subject: `${subject}`,
-        html: `<b>From:</b> ${name} <br/> 
-        <b>Email:</b> ${email} <br/>
-        <b>Phone:</b> ${phoneEdit} <br/>
-        <b>Date:</b> ${sendDate} <br/><br/>
-        ${message}`
+        transporter.sendMail({
+            to: "smfd2023@nolabeds.com,jason@nolabeds.com",
+            from: email,
+            subject: `${subject}`,
+            html: `From: ${name} \n 
+            Email: ${email} \n
+            Phone: ${phoneEdit} \n
+            Date: ${sendDate} \n\n
+            ${message}`
     }).then(() => {
         res.json("Yes");
     }).catch(() => {
-        res.json("No");
+        throw new Error('Email failed to send')
     });
+    } catch(err){
+        throw Error(err.message)
+    }
 });
 
 module.exports = router;

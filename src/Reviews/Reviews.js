@@ -44,11 +44,6 @@ const Reviews = props => {
                         <img className={ cssReviews.reviewSocialFacebook } src="/reviewImages/fbShare.png" alt="Facebook Logo"/>
                     </a>
                 </span>
-                <span>
-                    <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/home?status=https://www.nolabeds.com">
-                        <img className={ cssReviews.reviewSocialTwitter} src="/reviewImages/twitterShare.png" alt="Twitter Logo"/>
-                    </a>
-                </span>
             </div>
             <div className={cssReviews.mobileSpace}><p> blank </p></div>
             <div className={cssReviews.mainPageBottom}/>

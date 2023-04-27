@@ -58,7 +58,6 @@ class Message extends Component {
                             title: "Oops...",
                             text: "Something went wrong. You can still email us at Jason@nolabeds.com."
                         });
-                    this.clearSubmitted();
                 })
                 .catch(() => {
                     Swal.fire({
@@ -66,8 +65,7 @@ class Message extends Component {
                         title: "Oops...",
                         text: "Something went wrong. You can still email us at Jason@nolabeds.com."
                     });
-                    this.clearSubmitted();
-                });
+                }).finally(()=> this.clearSubmitted());
         }
     };
 
