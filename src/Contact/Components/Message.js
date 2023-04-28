@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import cssMessage from "./CSS/message.module.css";
 import axios from "axios";
+axios.defaults.withCredentials = true
+
 import Swal from "sweetalert2";
 import { api } from "../../Aux/trackingIDs";
 
@@ -11,8 +13,18 @@ class Message extends Component {
         phone: "",
         message: "",
         subject: "",
-        loading: false
+        loading: false,
+        csrf: ""
     };
+
+    componentDidMount(){
+        axios.post(`${api}/personalData/sendEmail`).then(res=>{
+            const {csrf} = res.data.csrf;
+            this.setState({
+                csrf
+            })
+        })
+    }
 
     onChangeHandler = e => {
         const { name } = e.target;
@@ -38,9 +50,9 @@ class Message extends Component {
             this.setState({
                 loading: true
             });
-            const { name, email, phone, message } = this.state;
+            const { name, email, phone, message, csrf } = this.state;
             const subject = !this.state.subject ? "New Email for Beds 4 Less" : this.state.subject;
-            axios.post(`${api}/personaldata`, {
+            axios.post(`${api}/personalData/sendEmail`, { 
                 name,
                 email,
                 phone,
@@ -48,7 +60,7 @@ class Message extends Component {
                 subject
             })
                 .then(res => {
-                    res.data === "Yes"
+                    res.data === "Sent"
                         ? Swal.fire({
                             icon: "success",
                             title: "Hurray!",
@@ -56,10 +68,20 @@ class Message extends Component {
                         }) : this.errorMessage()
                 })
                 .catch(() => {
-                    this.errorMessage()
-                }).finally(()=> this.clearSubmitted());
+                    this.errorMessage();
+                }).finally(()=>{
+                    this.clearSubmitted();
+                });
         }
     };
+
+    errorMessage = () =>{
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong. You can still email us at Jason@nolabeds.com."
+        });
+    }
 
     clearSubmitted = () => {
         this.setState({
@@ -72,15 +94,13 @@ class Message extends Component {
         });
     }
 
-    errorMessage = () =>{
-        Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "Your Message failed to send. You can still email us at Jason@nolabeds.com"
-        });
-    }
-
     render () {
+        if ('sendBeacon' in navigator) {
+            window.addEventListener('pagehide', function() {
+              navigator.sendBeacon(
+                `${api}/personalData/clearSessionId`);
+            }, false);
+          }
         return (
             <form className={ cssMessage.messageGrid } onChange={ this.onChangeHandler } onSubmit={e => this.onSubmitHanlder(e)} >
                 <div>
