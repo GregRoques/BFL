@@ -53,19 +53,10 @@ class Message extends Component {
                             icon: "success",
                             title: "Hurray!",
                             text: "Your Email has been sent!"
-                        }) : Swal.fire({
-                            icon: "error",
-                            title: "Oops...",
-                            text: "Something went wrong. You can still email us at Jason@nolabeds.com."
-                        });
+                        }) : this.errorMessage()
                 })
-                .catch((err) => {
-               
-                    Swal.fire({
-                        icon: "error",
-                        title: "Oops...",
-                        text: err
-                    });
+                .catch(() => {
+                    this.errorMessage()
                 }).finally(()=> this.clearSubmitted());
         }
     };
@@ -78,6 +69,14 @@ class Message extends Component {
             message: "",
             subject: "",
             loading: false
+        });
+    }
+
+    errorMessage = () =>{
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Your Message failed to send. You can still email us at Jason@nolabeds.com"
         });
     }
 
