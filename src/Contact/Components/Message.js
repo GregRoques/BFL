@@ -59,11 +59,12 @@ class Message extends Component {
                             text: "Something went wrong. You can still email us at Jason@nolabeds.com."
                         });
                 })
-                .catch(() => {
+                .catch((err) => {
+               
                     Swal.fire({
                         icon: "error",
                         title: "Oops...",
-                        text: "Something went wrong. You can still email us at Jason@nolabeds.com."
+                        text: err
                     });
                 }).finally(()=> this.clearSubmitted());
         }
