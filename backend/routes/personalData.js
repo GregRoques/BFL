@@ -37,12 +37,12 @@ router.post("/", (req, res) => {
             res.json("Yes");
         }).catch((err) => {
             const error1 = "Error sending failure: " + err
-            console.log(error1)
+            //console.log(error1)
             throw new Error(error1)
         });
     } catch(err){
         const error2 = "Backend Error before sgMail.send: " + err
-        console.log(error2)
+        //console.log(error2)
         throw Error(error2)
     }
 });
