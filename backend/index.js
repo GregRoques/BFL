@@ -9,7 +9,6 @@ const personalData = require("./routes/personalData");
 app.use(cors(
     { credentials: true, origin: "http://localhost:8080"}
 ));
-//app.enable('trust proxy');
 
 app.use(helmet());
 app.use(cookieParser());

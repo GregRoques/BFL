@@ -9,16 +9,19 @@
         Order allow,deny
         Options -Indexes
     </Directory>
-    <Location "/">
+    <Location "/personaldata">
         ProxyPreserveHost On
-        ProxyPass http://localhost:2000/
-        ProxyPassReverse http://localhost:2000/
+        ProxyPass http://localhost:2000/personaldata/
+        ProxyPassReverse http://localhost:2000/personaldata/
     </Location>
-RewriteEngine on
-RewriteCond %{SERVER_NAME} =www.nolabeds.com [OR]
-RewriteCond %{SERVER_NAME} =nolabeds.com
-RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+    //below added by certbot
+    RewriteEngine on
+    RewriteCond %{SERVER_NAME} =www.nolabeds.com [OR]
+    RewriteCond %{SERVER_NAME} =nolabeds.com
+    RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 </VirtualHost>
+
+                                                                                               12,4          Bot
 
 ============================================  htcAccess file
 
