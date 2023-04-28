@@ -11,7 +11,7 @@ app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use("/personalData", personalData);
+app.use("/personaldata", personalData);
 
 const PORT = 2000;
 app.listen(PORT, () => {

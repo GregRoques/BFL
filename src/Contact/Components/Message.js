@@ -40,7 +40,7 @@ class Message extends Component {
             });
             const { name, email, phone, message } = this.state;
             const subject = !this.state.subject ? "New Email for Beds 4 Less" : this.state.subject;
-            axios.post(`${api}/personalData`, {
+            axios.post(`${api}/personaldata`, {
                 name,
                 email,
                 phone,

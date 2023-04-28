@@ -1,15 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const nodemailer = require("nodemailer");
-const sendgridTransport = require("nodemailer-sendgrid-transport");
+
+const sgMail = require('@sendgrid/mail')
 const myKey = require("../util/sendgridApi.js");
-
-const transporter = nodemailer.createTransport(sendgridTransport({
-    auth: {
-        api_key: myKey
-    }
-}));
-
+sgMail.setApiKey(myKey)
 
 const phoneFormat = ph => {
     const onlyNumbers = ph.replace(/\D/g, "");
@@ -29,22 +23,23 @@ router.post("/", (req, res) => {
         const phoneEdit = phoneFormat(phone);
         const sendDate = new Date().toISOString().slice(0, 10);
 
-        transporter.sendMail({
+       const emailMsg ={
             to: "smfd2023@nolabeds.com,jason@nolabeds.com",
             from: email,
             subject: `${subject}`,
-            html: `From: ${name} \n 
-            Email: ${email} \n
-            Phone: ${phoneEdit} \n
-            Date: ${sendDate} \n\n
+            html: `From: ${name} <br> 
+            Email: ${email} <br>
+            Phone: ${phoneEdit} <br>
+            Date: ${sendDate} <br><br>
             ${message}`
-    }).then(() => {
-        res.json("Yes");
-    }).catch(() => {
-        throw new Error('Email failed to send')
-    });
+        }
+        sgMail.send(emailMsg).then(() => {
+            res.json("Yes");
+        }).catch((err) => {
+            throw new Error("Error sending failure: " + err)
+        });
     } catch(err){
-        throw Error(err.message)
+        throw Error("Backend Error before sgMail.send: " + err)
     }
 });
 

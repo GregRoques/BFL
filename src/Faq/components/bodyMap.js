@@ -6,7 +6,7 @@ import { css } from "emotion";
 const bodyMap = (image, pageHeader, currArray) => {
     
     const headerImage = css`
-        background-image: url(/about/${image}.jpg)
+        background-image: url(/faq_background_images/${image}.jpg)
     `
         return (
             <div className={cssFaq.faqFadeIn}>
