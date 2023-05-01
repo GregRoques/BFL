@@ -13,10 +13,9 @@ const history = createBrowserHistory();
 ReactGA.initialize(trackingId)
 
 history.listen(location => {
-    ReactGA.send({ 
-        hitType: "pageview",
-        page: location.pathname
-    }); 
+  // console.log(location.pathname, location.hash)
+  ReactGA.set({ page: location.pathname })
+  ReactGA.pageview(location.pathname)
   });
 
 
