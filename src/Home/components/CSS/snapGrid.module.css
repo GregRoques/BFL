@@ -14,22 +14,20 @@
 
 .snapImage{
     margin: 0.5rem 10% 0.5rem 10%;
-    width:80%;
+    width:250px;
+    height:250px;
+    /* max-width: 250px; */
     object-fit: contain;
     transition: .5s;
 }
 
 .snapHomeImage{
     margin: 0.5rem 10% 0.5rem 10%;
-    width:80%;
-    object-fit: contain;
+    width:65%;
+    min-height: 250px;
+    object-fit:cover;
     box-shadow: 2px 2px 4px rgba(0,0,0,0.65);
     border-radius: 15px;
-}
-
-.snapImage:hover{
-    transition: .5s;
-    transform: scale(.9);
 }
 
 .snapDescription{
@@ -47,6 +45,7 @@
 .snapDescription b{
     font-size: 24px;
     line-height: 36px;
+    color: #166DB4;
 }
 
 .dateSelected{

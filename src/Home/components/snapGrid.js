@@ -11,11 +11,9 @@ const Snap = () => {
                     <img className={cssSnap.snapImage} src="/snap.jpg"/>
                 </a>
                 <div className={cssSnap.snapDescription}>
-                    <b>Snap Financial offers 
-                    <br/>
-                    <span className={cssSnap.dateSelected}>100 DAYS SAME AS CASH</span></b>
+                    <b>Snap Offers Financing Options</b>
                     <br/><br/>
-                    Click the link above and fill out the on line application to get an instant approval.
+                    Click the image above to apply.
                 </div>
                 <hr className={cssSnap.smallSeperator}/>
             </div>

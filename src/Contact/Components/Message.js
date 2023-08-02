@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import cssMessage from "./CSS/message.module.css";
 import axios from "axios";
-axios.defaults.withCredentials = true
-
 import Swal from "sweetalert2";
 import { api } from "../../Aux/trackingIDs";
 
@@ -13,18 +11,8 @@ class Message extends Component {
         phone: "",
         message: "",
         subject: "",
-        loading: false,
-        csrf: ""
+        loading: false
     };
-
-    componentDidMount(){
-        axios.post(`${api}/personalData/sendEmail`).then(res=>{
-            const {csrf} = res.data.csrf;
-            this.setState({
-                csrf
-            })
-        })
-    }
 
     onChangeHandler = e => {
         const { name } = e.target;
@@ -50,9 +38,9 @@ class Message extends Component {
             this.setState({
                 loading: true
             });
-            const { name, email, phone, message, csrf } = this.state;
+            const { name, email, phone, message } = this.state;
             const subject = !this.state.subject ? "New Email for Beds 4 Less" : this.state.subject;
-            axios.post(`${api}/personalData/sendEmail`, { 
+            axios.post(`${api}/personaldata`, {
                 name,
                 email,
                 phone,
@@ -60,28 +48,26 @@ class Message extends Component {
                 subject
             })
                 .then(res => {
-                    res.data === "Sent"
+                    res.data === "Yes"
                         ? Swal.fire({
                             icon: "success",
                             title: "Hurray!",
                             text: "Your Email has been sent!"
-                        }) : this.errorMessage()
+                        }) : Swal.fire({
+                            icon: "error",
+                            title: "Oops...",
+                            text: "Something went wrong. You can still email us at Jason@nolabeds.com."
+                        });
                 })
                 .catch(() => {
-                    this.errorMessage();
-                }).finally(()=>{
-                    this.clearSubmitted();
-                });
+                    Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: "Something went wrong. You can still email us at Jason@nolabeds.com."
+                    });
+                }).finally(()=> this.clearSubmitted());
         }
     };
-
-    errorMessage = () =>{
-        Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "Something went wrong. You can still email us at Jason@nolabeds.com."
-        });
-    }
 
     clearSubmitted = () => {
         this.setState({
@@ -95,12 +81,6 @@ class Message extends Component {
     }
 
     render () {
-        if ('sendBeacon' in navigator) {
-            window.addEventListener('pagehide', function() {
-              navigator.sendBeacon(
-                `${api}/personalData/clearSessionId`);
-            }, false);
-          }
         return (
             <form className={ cssMessage.messageGrid } onChange={ this.onChangeHandler } onSubmit={e => this.onSubmitHanlder(e)} >
                 <div>
