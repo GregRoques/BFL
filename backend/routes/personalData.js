@@ -24,7 +24,7 @@ router.post("/", (req, res) => {
         const sendDate = new Date().toISOString().slice(0, 10);
 
        const emailMsg ={
-            to: "greg.roques@gmail.com",
+            to: "jfeder44@gmail.com",
             from: "smfd2023@nolabeds.com",
             subject: `${subject}`,
             html: `From: ${name} <br> 
