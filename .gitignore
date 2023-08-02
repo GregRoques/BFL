@@ -6,7 +6,7 @@
 /.pnp
 .pnp.js
 /src/Aux
-/backend/util
+/backend/routes/apiKey.js
 
 
 # testing

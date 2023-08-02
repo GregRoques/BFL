@@ -6,9 +6,7 @@ const helmet = require("helmet");
 
 const personalData = require("./routes/personalData");
 
-app.use(cors(
-    { credentials: true, origin: "http://localhost:8080"}
-));
+app.use(cors());
 
 app.use(helmet());
 app.use(cookieParser());

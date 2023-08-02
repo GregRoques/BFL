@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import cssMessage from "./CSS/message.module.css";
 import axios from "axios";
+
 import Swal from "sweetalert2";
 import { api } from "../../Aux/trackingIDs";
 
@@ -38,6 +39,7 @@ class Message extends Component {
             this.setState({
                 loading: true
             });
+         
             const { name, email, phone, message } = this.state;
             const subject = !this.state.subject ? "New Email for Beds 4 Less" : this.state.subject;
             axios.post(`${api}/personaldata`, {
@@ -53,22 +55,21 @@ class Message extends Component {
                             icon: "success",
                             title: "Hurray!",
                             text: "Your Email has been sent!"
-                        }) : Swal.fire({
-                            icon: "error",
-                            title: "Oops...",
-                            text: "Something went wrong. You can still email us at Jason@nolabeds.com."
-                        });
+                        }) : this.fireError();
                 })
                 .catch(() => {
-                    Swal.fire({
-                        icon: "error",
-                        title: "Oops...",
-                        text: "Something went wrong. You can still email us at Jason@nolabeds.com."
-                    });
+                  this.fireError()
                 }).finally(()=> this.clearSubmitted());
         }
     };
 
+    fireError = () =>{
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong. You can still email us at Jason@nolabeds.com."
+        });
+    }
     clearSubmitted = () => {
         this.setState({
             name: "",

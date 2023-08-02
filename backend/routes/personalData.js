@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const sgMail = require('@sendgrid/mail')
-
+const myKey = require("./apiKey");
 sgMail.setApiKey(myKey)
 
 const phoneFormat = ph => {
@@ -18,14 +18,13 @@ const phoneFormat = ph => {
 
 router.post("/", (req, res) => {
     try{
-            console.log(JSON.stringify(req.body));
              const { name, email, phone, message, subject } = req.body;
 
         const phoneEdit = phoneFormat(phone);
         const sendDate = new Date().toISOString().slice(0, 10);
 
        const emailMsg ={
-            to: "jason@nolabeds.com",
+            to: "greg.roques@gmail.com",
             from: "smfd2023@nolabeds.com",
             subject: `${subject}`,
             html: `From: ${name} <br> 
@@ -35,7 +34,7 @@ router.post("/", (req, res) => {
             ${message}`
         }
         sgMail.send(emailMsg).then(() => {
-            res.json("Yes");
+            return res.json("Yes");
         }).catch((err) => {
             const error1 = "Error sending failure: " + err
             //console.log(error1)
