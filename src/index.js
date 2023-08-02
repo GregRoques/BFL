@@ -11,12 +11,13 @@ import { trackingId } from "./Aux/trackingIDs";
 const history = createBrowserHistory();
 
 ReactGA.initialize(trackingId)
+ReactGA.send("pageview");
 
-history.listen(location => {
-  // console.log(location.pathname, location.hash)
-  ReactGA.set({ page: location.pathname })
-  ReactGA.pageview(location.pathname)
-  });
+// history.listen(location => {
+//   // console.log(location.pathname, location.hash)
+//   ReactGA.set({ page: location.pathname })
+//   ReactGA.pageview(location.pathname)
+//   });
 
 
 ReactDOM.render(

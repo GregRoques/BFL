@@ -25,7 +25,7 @@ class Circles extends Component{
                         :  "shop";
         const fadeAway = titleIndex;
         const backgroundCircle = css`
-        background-image: url("/about/${nextPage}.jpg");`;
+        background-image: url("/faq_background_images/${nextPage}.jpg");`;
         const cssJoin = [backgroundCircle, cssCircles.innerCircle];
 
         return (
