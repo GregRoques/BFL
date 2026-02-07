@@ -1,6 +1,17 @@
+/**
+ * @file Map.js
+ * @description Embedded Google Map showing the Beds 4 Less store location.
+ */
+
 import React from "react";
 import cssMap from "./CSS/map.module.css";
 
+/**
+ * @component map
+ * @description Renders a "Directions" header and an embedded Google Maps
+ * iframe pointing to the store address at 3729 Williams Blvd, Kenner, LA.
+ * @returns {JSX.Element} The map section.
+ */
 const map = () => {
     return (
         <div >

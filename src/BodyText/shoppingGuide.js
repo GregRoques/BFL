@@ -1,3 +1,13 @@
+/**
+ * @file shoppingGuide.js
+ * @description Content data for the "Shopping Guide" FAQ page. Includes
+ * mattress buying advice, sizing charts, comfort levels, and terminology.
+ */
+
+/**
+ * @constant {Array<{header: string, body: string[]}>} shoppingGuide
+ * @description Shopping guide sections rendered on the Shop page.
+ */
 const shoppingGuide = [
     {
         header: "Better Sleep Begins with Your Mattress",

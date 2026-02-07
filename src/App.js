@@ -1,3 +1,9 @@
+/**
+ * @file App.js
+ * @description Root application component. Defines all client-side routes
+ * using React Router and wraps them in the shared Layout (header/footer).
+ */
+
 import React, {Component} from 'react';
 import { Route, Switch, Redirect, withRouter } from "react-router-dom";
 import cssApp from './app.module.css';
@@ -10,7 +16,16 @@ import SOS from "./Faq/sos";
 import Contact from "./Contact/Contact";
 import Reviews from "./Reviews/Reviews"
 
+/**
+ * @component App
+ * @description Top-level class component that renders the site layout and
+ * route definitions. Unmatched routes redirect to the Home page.
+ */
 class App extends Component {
+  /**
+   * @description Catch-all route handler — redirects unknown paths to Home.
+   * @returns {JSX.Element} A React Router Redirect to the Home page.
+   */
   NoPage = () => {
     return <Redirect push to={Home} />;
 };

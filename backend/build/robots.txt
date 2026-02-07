@@ -1,0 +1,33 @@
+# Robots.txt for Beds 4 Less - nolabeds.com
+
+# Allow all search engines
+User-agent: *
+Allow: /
+
+# Disallow admin/internal paths (add any private routes here)
+Disallow: /api/
+Disallow: /*.json$
+
+# Crawl-delay for politeness (optional, most major crawlers ignore this)
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://www.nolabeds.com/sitemap.xml
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+
+# Bing specific
+User-agent: Bingbot
+Allow: /
+
+# Allow social media crawlers for rich previews
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /

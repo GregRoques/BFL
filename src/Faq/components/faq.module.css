@@ -1,106 +1,111 @@
-.faqFadeIn{
+/* ==============================================
+   FAQ Pages – Shared Styles
+   ============================================== */
+
+/* --- Page Animation --- */
+.faqFadeIn {
     animation-name: fadeIn;
-    animation-duration:2s;
+    animation-duration: 2s;
 }
 
-@keyframes fadeIn{
-    0%{
-        opacity:0;
-    }
-    100%{
-        opacity:1;
-    }
-}
-
-.topBody{
-    position:relative;
+/* --- Page Container --- */
+.topBody {
+    position: relative;
     width: 100%;
     height: 100%;
-    top:60px;
+    top: 60px;
     margin-bottom: 4rem;
 }
 
-.topContainer{
+/* --- Hero Section --- */
+.topContainer {
     margin: 0px 20% 0px 20%;
 }
 
-.topImage{
+.topImage {
     padding-right: 60%;
     padding-top: 56.25%;
     margin-bottom: 3rem;
     background-position: center;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     background-size: cover;
-    /* border-radius: 25px; */
-    box-shadow: 3px 3px 3px rgba(0,0,0,0.65)
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.65);
 }
 
-.topImageText{
+.topImageText {
     margin: 2rem 0px 2rem 0px;
     text-align: center;
     color: #E92427;
-    font-size:72px;
+    font-size: 72px;
     font-family: 'Oleo Script', cursive;
- }
+}
 
- .faqTextContainer{
-     text-align: left;
-     margin: 0px 2rem 0px 2.5rem;
- }
+/* --- FAQ Content Sections --- */
+.faqTextContainer {
+    text-align: left;
+    margin: 0px 2rem 0px 2.5rem;
+}
 
- .faqTextHeader{
+.faqTextHeader {
     font-family: 'Oleo Script', cursive;
     font-size: 30px;
     color: #2677B9;
     margin: 2rem 0px 1rem 0px;
- }
+}
 
- .faqBodyText{
-     font-size: 16px;
-     line-height: 24px;
-     margin-left: 1rem;
- }
+.faqBodyText {
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 1rem;
+}
 
- .breakClass{
-     line-height: 18px;
- }
+.breakClass {
+    line-height: 18px;
+}
 
- /* =========================== Media Screen */
-
- @media screen and (max-width: 990px){
-    .topContainer{
+/* ==============================================
+   Responsive – Tablet (≤990px)
+   ============================================== */
+@media screen and (max-width: 990px) {
+    .topContainer {
         margin: 0px 12.5% 0px 12.5%;
     }
 
-    .topImage{
+    .topImage {
         padding-right: 75%;
- }
+    }
 }
 
- @media screen and (max-width: 767px){
-    .topContainer{
+/* ==============================================
+   Responsive – Mobile (≤767px)
+   ============================================== */
+@media screen and (max-width: 767px) {
+    .topContainer {
         margin: 0px 5% 0px 5%;
     }
 
-    .faqTextHeader{
+    .faqTextHeader {
         font-size: 24px;
     }
 
-    .topImageText{
+    .topImageText {
         font-size: 60px;
     }
 
-    .topImage{
+    .topImage {
         padding-right: 90%;
     }
- }
+}
 
- @media screen and (max-width: 399px){
-    .header{
-        font-size:55px;
+/* ==============================================
+   Responsive – Small Mobile (≤399px)
+   ============================================== */
+@media screen and (max-width: 399px) {
+    .header {
+        font-size: 55px;
     }
 
-    .topImageText{
+    .topImageText {
         font-size: 48px;
     }
 }

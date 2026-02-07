@@ -1,9 +1,9 @@
 ============================================ config file
 <VirtualHost *:80>
-    DocumentRoot /var/www/BFL/backend/public
+    DocumentRoot /var/www/BFL/backend/build
     ServerName nolabeds.com
     ServerAlias www.nolabeds.com
-    <Directory "/var/www/BFL/backend/public">
+    <Directory "/var/www/BFL/backend/build">
         allow from all
         AllowOverride All
         Order allow,deny

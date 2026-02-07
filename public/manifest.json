@@ -1,25 +1,35 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "name": "Beds 4 Less - Quality Mattresses at Discount Prices",
+  "short_name": "Beds 4 Less",
+  "description": "Shop top-quality mattresses and bedding at up to 80% off retail prices. Family-owned mattress store serving New Orleans, Kenner, and Metairie.",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "iconLogo.png",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "logo192.png",
+      "src": "iconLogo.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any maskable"
     },
     {
-      "src": "logo512.png",
+      "src": "iconLogo.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "orientation": "portrait-primary",
+  "theme_color": "#09548F",
+  "background_color": "#ffffff",
+  "categories": ["shopping", "lifestyle"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "prefer_related_applications": false
 }

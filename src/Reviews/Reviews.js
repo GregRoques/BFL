@@ -1,7 +1,19 @@
+/**
+ * @file Reviews.js
+ * @description "Thank You" page shown after a purchase. Provides links for
+ * customers to leave reviews on Facebook, Yelp, and Google, plus social
+ * sharing buttons (email and Facebook).
+ */
 
 import React from "react";
 import cssReviews from "./reviews.module.css";
 
+/**
+ * @component Reviews
+ * @description Renders a thank-you message, review platform buttons
+ * (Facebook, Yelp, Google), a separator, and social sharing links.
+ * @returns {JSX.Element} The Reviews / Thank You page.
+ */
 const Reviews = props => {
     return (
         <div>

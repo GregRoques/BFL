@@ -1,11 +1,15 @@
+/* ==============================================
+   App – Root Container
+   ============================================== */
+
+/* --- Layout --- */
 .body {
-    width:100vw;
+    width: 100vw;
     height: 100vh;
     margin: 0 auto;
     text-align: center;
-    top:0;
+    top: 0;
     right: 0;
     left: 0;
     bottom: 0;
 }
-

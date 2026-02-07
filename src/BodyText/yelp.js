@@ -1,3 +1,14 @@
+/**
+ * @file yelp.js
+ * @description Customer review data pulled from Yelp and Facebook. Each entry
+ * includes the review text, customer name, and a link to the original review.
+ */
+
+/**
+ * @constant {Array<{review: string, name: string, link: string}>} yelp
+ * @description Collection of customer testimonials displayed in the rotating
+ * review carousel on the home page.
+ */
 const yelp = [
     {
         review: "Beds 4 Less has great prices, and such friendly and knowledgeable employees!",

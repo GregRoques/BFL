@@ -1,48 +1,67 @@
+/**
+ * @file Hours.js
+ * @description Contact page section displaying phone/email links, social
+ * media icons, and the current business hours with today highlighted.
+ */
+
 import React from "react";
 import cssHours from "./CSS/hours.module.css";
+import {
+    BUSINESS_PHONE,
+    BUSINESS_PHONE_LINK,
+    BUSINESS_EMAIL,
+    SOCIAL_LINKS,
+    BUSINESS_HOURS
+} from "../../Aux/businessInfo";
+import { getDayNumber, isDayOpen, isDayClosed } from "../../Functions/timeUtils";
 
-const Hours = props => {
-    const dayNum = (new Date()).getDay();
+/**
+ * @component Hours
+ * @description Renders a two-column grid with contact methods (phone, email,
+ * social links) on the left and business hours on the right. Highlights
+ * the current day's status (open or closed).
+ * @returns {JSX.Element} The hours/contact section.
+ */
+const Hours = () => {
+    const dayNum = getDayNumber();
+
     return (
-        <div className={ cssHours.hoursGrid }>
-            <div className= { cssHours.seperator}>
-                <div className={ cssHours.header }>
+        <div className={cssHours.hoursGrid}>
+            <div className={cssHours.seperator}>
+                <div className={cssHours.header}>
                     <div className={cssHours.contactBig}>Call Us</div>
                 </div>
-                <div className={ cssHours.connectGrid }>
-                    <div className={ cssHours.hitEmWithTheFlex}>
-                        <a href="tel:504-305-4430">
-                            <img alt="(504) 305-4430" className={ cssHours.connectContact } src={"/myImages/phone.png"}/>
+                <div className={cssHours.connectGrid}>
+                    <div className={cssHours.hitEmWithTheFlex}>
+                        <a href={BUSINESS_PHONE_LINK}>
+                            <img alt={BUSINESS_PHONE} className={cssHours.connectContact} src="/myImages/phone.png"/>
                             <br/>
-                            504-305-4430
+                            {BUSINESS_PHONE}
                         </a>
                     </div>
-                    <div className={ cssHours.hitEmWithTheFlex}>
-                        <a href="mailto:jason@nolabeds.com?subject=Question%20for%20Jason">
-                            <img alt="jason@nolabeds.com" className={ cssHours.connectContact } src="/myImages/email.png"/>
+                    <div className={cssHours.hitEmWithTheFlex}>
+                        <a href={`mailto:${BUSINESS_EMAIL}?subject=Question%20for%20Jason`}>
+                            <img alt={BUSINESS_EMAIL} className={cssHours.connectContact} src="/myImages/email.png"/>
                             <br/>
                             Jason@NolaBeds.com
                         </a>
                     </div>
                 </div>
-                <a href="https://www.facebook.com/Beds4Less" target="_blank" rel="noopener noreferrer">
-                    <img alt="Facebook" className={ cssHours.connectSocial } src="/myImages/facebook.png"/>
+                <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer">
+                    <img alt="Facebook" className={cssHours.connectSocial} src="/myImages/facebook.png"/>
                 </a>
-                <a href="https://www.yelp.com/biz/beds-4-less-kenner" target="_blank" rel="noopener noreferrer">
-                    <img alt="Yelp" className={ cssHours.connectSocial } src="/myImages/yelp.png"/>
+                <a href={SOCIAL_LINKS.yelp} target="_blank" rel="noopener noreferrer">
+                    <img alt="Yelp" className={cssHours.connectSocial} src="/myImages/yelp.png"/>
                 </a>
-
             </div>
-            <div className={ cssHours.weekDays }>
-                <div className={ cssHours.header }>
-                    Hours
+            <div className={cssHours.weekDays}>
+                <div className={cssHours.header}>Hours</div>
+                <div className={isDayOpen(dayNum) ? cssHours.highlightDate : null}>
+                    <div>Tuesday – Saturday <br/> {BUSINESS_HOURS.open.display}</div>
                 </div>
-                <div className= { dayNum > 1 ? cssHours.highlightDate : null } >
-                   <div>Tuesday – Saturday <br/> 10 a.m. – 6 p.m.</div>
-    
-                </div> <br/>
-                <div className= { dayNum === 1 || dayNum === 0 ? cssHours.highlightDate : null }>
-                    <div>Sunday – Monday<br/> Closed</div>
+                <br/>
+                <div className={isDayClosed(dayNum) ? cssHours.highlightDate : null}>
+                    <div>Sunday – Monday<br/> {BUSINESS_HOURS.closedDisplay}</div>
                 </div>
             </div>
         </div>

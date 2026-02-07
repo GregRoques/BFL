@@ -1,19 +1,29 @@
+/* ==============================================
+   Contact Page – Embedded Map
+   ============================================== */
+
+/* --- Font Imports --- */
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
 
+/* --- Map Iframe --- */
 .mapBody {
     height: 400px;
-    width:100%;
+    width: 100%;
 }
 
-.header{
+/* --- Section Header --- */
+.header {
     margin-bottom: 20px;
     font-family: 'Oleo Script', cursive;
-    color:#2677B9;
-    font-size:72px;
+    color: #2677B9;
+    font-size: 72px;
 }
 
-@media screen and (max-width: 399px){
-    .header{
-        font-size:55px;
+/* ==============================================
+   Responsive – Small Mobile (≤399px)
+   ============================================== */
+@media screen and (max-width: 399px) {
+    .header {
+        font-size: 55px;
     }
 }

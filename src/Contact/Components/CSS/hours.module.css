@@ -1,50 +1,53 @@
+/* ==============================================
+   Contact Page – Hours & Contact Info
+   ============================================== */
+
+/* --- Font Imports --- */
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
 
+/* --- Grid Layout --- */
 .hoursGrid {
-    margin-top:45px;
-    width:100%;
+    margin-top: 45px;
+    width: 100%;
     height: auto;
     display: grid;
     grid-template-columns: 50% 50%;
     row-gap: 1rem;
-    border-block-color: 1px solid rgb(0,0,0,0.15);
+    border-block-color: 1px solid rgb(0, 0, 0, 0.15);
 }
 
-.highlightDate {
-    font-weight: bold;
-    color: #E92427;;
+.seperator {
+    border-right: 1px solid rgb(128, 128, 128, 0.35);
 }
 
-.header{
+/* --- Section Header --- */
+.header {
     font-family: 'Oleo Script', cursive;
     color: #2677B9;
-    font-size:72px;
+    font-size: 72px;
     margin-bottom: 2rem;
 }
 
-.connectGrid{
+/* --- Contact Methods (Phone / Email) --- */
+.connectGrid {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.hitEmWithTheFlex{
+.connectGrid a {
+    color: black;
+}
+
+.hitEmWithTheFlex {
     height: auto;
-    display: flex; 
+    display: flex;
     margin: 0 1rem 0 1rem;
-    position:relative;
+    position: relative;
     flex-direction: column;
     font-weight: bold;
     font-size: 14px;
     row-gap: 1rem;
-}
-
-.connectGrid a{
-    color:black;
-}
-
-.seperator{
-    border-right: 1px solid rgb(128,128,128,0.35);
 }
 
 .connectContact {
@@ -53,59 +56,71 @@
     margin-bottom: 10px;
 }
 
-.connectSocial{
+/* --- Social Media Icons --- */
+.connectSocial {
     width: 55px;
     height: auto;
     margin-top: 40px;
     margin: 3rem 1.5rem 3rem 1.5rem;
 }
 
-
-.weekDays {
-    font-size: 24px;
-}
-
-.contactBig{
+/* --- Display Toggle --- */
+.contactBig {
     display: inline-block;
 }
 
 .contactSmall {
-    display:none;
+    display: none;
 }
 
-@media screen and (max-width: 735px){
+/* --- Day Highlight --- */
+.highlightDate {
+    font-weight: bold;
+    color: #E92427;
+}
+
+/* --- Hours Column --- */
+.weekDays {
+    font-size: 24px;
+}
+
+/* ==============================================
+   Responsive – Tablet (≤735px)
+   ============================================== */
+@media screen and (max-width: 735px) {
     .hoursGrid {
         grid-template-columns: 100%;
-
     }
 
-    .seperator{
-        border-bottom: 1px solid rgb(128,128,128,0.35);
+    .seperator {
+        border-bottom: 1px solid rgb(128, 128, 128, 0.35);
         border-right: none;
         margin: 0rem 0px 0rem 0px;
     }
 }
 
-@media screen and (max-width: 399px){
-    .header{
-        font-size:55px;
+/* ==============================================
+   Responsive – Small Mobile (≤399px)
+   ============================================== */
+@media screen and (max-width: 399px) {
+    .header {
+        font-size: 55px;
         margin-bottom: 1;
     }
 
-    .weekDays, .highlightDate{
+    .weekDays, .highlightDate {
         font-size: 18px;
     }
 
-    .hitEmWithTheFlex{
+    .hitEmWithTheFlex {
         font-size: 16px;
     }
 
-    .connectGrid{
+    .connectGrid {
         display: block;
     }
 
-    .hitEmWithTheFlex + .hitEmWithTheFlex{
+    .hitEmWithTheFlex + .hitEmWithTheFlex {
         margin-top: 2rem;
     }
-
 }

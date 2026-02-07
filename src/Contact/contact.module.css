@@ -1,43 +1,42 @@
+/* ==============================================
+   Contact Page Layout
+   ============================================== */
+
+/* --- Page Container --- */
+.body {
+    position: relative;
+    top: 60px;
+}
+
+/* --- Grid Layout --- */
 .grid {
-    width:100%;
+    width: 100%;
     height: auto;
     display: grid;
     grid-template-rows: auto;
     row-gap: 1rem;
     animation-name: fadeIn;
-    animation-duration:2s;
+    animation-duration: 2s;
 }
 
-@keyframes fadeIn {
-    0%{
-        opacity:0;
-    }
-    100%{
-        opacity:1;
-    }
-}
-
-.body{
-    position: relative;
-    top:60px;
+/* --- Spacing --- */
+.contactMagin {
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 hr {
     margin-top: 50px;
-    opacity:0.35;
-}
-.contactMagin{
-    padding-left:5%;
-    padding-right:5%;
+    opacity: 0.35;
 }
 
-.copyright{
-    margin-bottom:2rem;
+/* --- Copyright Footer --- */
+.copyright {
+    margin-bottom: 2rem;
     font-weight: bold;
 }
 
-.copyright a{
-    color:black;
+.copyright a {
     text-decoration: underline;
     color: blue;
 }

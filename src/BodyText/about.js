@@ -1,3 +1,13 @@
+/**
+ * @file about.js
+ * @description Content data for the "Our Products" FAQ page. Each entry
+ * contains a header and an array of body paragraphs rendered by bodyMap.
+ */
+
+/**
+ * @constant {Array<{header: string, body: string[]}>} about
+ * @description Product information sections displayed on the About page.
+ */
 const about = [
     {
         header: "Why Beds 4 Less Mattress Outlet?",

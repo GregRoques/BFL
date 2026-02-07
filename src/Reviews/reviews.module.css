@@ -1,15 +1,20 @@
+/* ==============================================
+   Reviews / Thank You Page
+   ============================================== */
+
+/* --- Font Imports --- */
 @import url('https://fonts.googleapis.com/css?family=Sriracha&display=swap');
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap');
 
-.thankYou{
+/* --- Page Header --- */
+.thankYou {
     margin-top: 85px;
     font-size: 4rem;
     color: #E92427;
-    /* text-shadow: 2px 3px 3px rgb(0,0,0,0.5); */
     font-family: 'Sriracha', cursive;
 }
 
-.thankYouParagraph{
+.thankYouParagraph {
     font-size: 1.25rem;
     color: gray;
     line-height: 2rem;
@@ -17,41 +22,70 @@
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
-.shareHeader{
+/* --- Review Platform Buttons --- */
+.yelpReview,
+.fbReview {
+    height: 85px;
+    width: auto;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 3rem 3rem 0px 3rem;
+    transition: 0.5s;
+}
+
+.yelpReview:hover,
+.fbReview:hover {
+    transform: scale(0.9);
+}
+
+/* --- Separator --- */
+.reviewSeperator {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* --- Share Section --- */
+.withFriendsHeader {
+    font-size: 3rem;
+    color: #2677B9;
+    text-align: center;
+    font-family: 'Sriracha', cursive;
+}
+
+.shareHeader {
     font-size: 2.5rem;
     margin: 1.5rem 0px 1.5rem 0px;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     color: #13A399;
-    font-weight: 900
+    font-weight: 900;
 }
 
-.yelpReview, .fbReview{
-    height:85px;
-    width:auto;
-    border-radius: 15px;
-    cursor: pointer;
-    margin: 3rem 3rem 0px 3rem;
-    transition:.5s
+/* --- Social Share Icons --- */
+.reviewSocialEmail,
+.reviewSocialFacebook,
+.reviewSocialTwitter {
+    width: 75px;
+    transition: 0.5s;
+    margin: 2rem 1.5rem 0px 1.5rem;
 }
 
-.yelpReview:hover, .fbReview:hover{
-    transform: scale(.9)
+.reviewSocialEmail:hover,
+.reviewSocialFacebook:hover,
+.reviewSocialTwitter:hover {
+    transform: scale(0.9);
 }
 
-.reviewSeperator{
-    margin-top: 3rem;
-    margin-bottom: 1rem
-}
-
-.reviewButtonContainer{
-    text-align:center;
-}
-
-.reviewsBody{
+/* --- Layout Helpers --- */
+.reviewButtonContainer {
     text-align: center;
 }
 
-.mainPageBottom{
+.reviewsBody {
+    text-align: center;
+}
+
+/* --- Bottom Spacer & White Bar --- */
+.mainPageBottom {
     position: fixed;
     width: 100%;
     height: 25px;
@@ -59,62 +93,34 @@
     background-color: white;
 }
 
-.mobileSpace{
-    width:100%;
+.mobileSpace {
+    width: 100%;
     padding-top: 5rem;
     visibility: hidden;
 }
 
-.reviewSocialEmail, .reviewSocialFacebook, .reviewSocialTwitter{
-    width: 75px;
-    margin: .5rem;
-    transition:.5s;
-    margin: 2rem 1.5rem 0px 1.5rem;
-}
-
-
-.reviewSocialEmail:hover, .reviewSocialFacebook:hover, .reviewSocialTwitter:hover{
-    transform: scale(.9)
-}
-
-.withFriendsHeader{
-    font-size: 3rem;
-    color: #2677B9;
-    text-align: center;
-    font-family: 'Sriracha', cursive;
-}
-
-@media screen and (max-width: 499px){
-    .thankYouParagraph{
-        font-size: 1rem;
-        color: gray;
-        line-height: 1.5rem;
-        margin: 0px 2rem 0px 2rem;
-        font-family: 'M PLUS Rounded 1c', sans-serif;
-    }
-
-    .withFriendsHeader{
-        font-size: 2rem;
-    }
-
-    .reviewSocialEmail, .reviewSocialFacebook, .reviewSocialTwitter{
-        margin: 1.5rem 1.5rem 0px 1.5rem;
-        width:50px;
-    }
-
-    .thankYou{
+/* ==============================================
+   Responsive – Small Mobile (≤499px)
+   ============================================== */
+@media screen and (max-width: 499px) {
+    .thankYou {
         font-size: 3rem;
     }
-}
 
-@media screen and (max-width: 499px){
-    .withFriendsHeader{
+    .thankYouParagraph {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin: 0px 2rem 0px 2rem;
+    }
+
+    .withFriendsHeader {
         font-size: 1.75rem;
     }
 
-    .reviewSocialEmail, .reviewSocialFacebook, .reviewSocialTwitter{
+    .reviewSocialEmail,
+    .reviewSocialFacebook,
+    .reviewSocialTwitter {
         margin: 1.25rem 1.25rem 0px 1.25rem;
-        width:50px;
+        width: 50px;
     }
 }
-

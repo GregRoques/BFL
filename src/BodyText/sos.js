@@ -1,3 +1,13 @@
+/**
+ * @file sos.js
+ * @description Content data for the "Science of Sleep" FAQ page. Each entry
+ * contains a header and an array of body paragraphs/bullet points.
+ */
+
+/**
+ * @constant {Array<{header: string, body: string[]}>} sos
+ * @description Sleep science facts and tips displayed on the SOS page.
+ */
 const sos = [
     {
         header: "Did You Know?",
