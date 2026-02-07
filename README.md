@@ -162,6 +162,19 @@ The project uses two `.gitignore` files to keep secrets and build artifacts out 
 
 ---
 
+## Instructions to Get Gmail Password for Nodemailer (backend dependency)
+
+ Gmail Setup: You can use it with Gmail, but there's one important requirement — Google no longer allows "less secure app" access, so you need to use an App Password:
+
+  1. Enable 2-Step Verification on your Google account
+  2. Go to your Google Account > Security > App Passwords (or go to https://myaccount.google.com/apppasswords and generate one for "Mail")
+  3. Generate an app password for "Mail"
+  4. Use that 16-character password in your Nodemailer config (not your regular Gmail password)
+
+  Gmail Limits: A free Gmail account lets you send ~500 emails/day.
+
+  ---
+
 ## Available Scripts
 
 | Command           | Description                        |
